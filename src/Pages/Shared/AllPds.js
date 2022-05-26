@@ -6,7 +6,7 @@ const AllPds = () => {
     const [Refresh, setRefresh] = React.useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://cryptic-everglades-92183.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setAllPds(data));
         setRefresh(!Refresh);

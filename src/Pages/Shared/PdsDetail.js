@@ -19,7 +19,7 @@ const PdsDetail = () => {
     // const [user, loading, error] = useAuthState(auth);
 
     const { id } = useParams();
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://cryptic-everglades-92183.herokuapp.com/product/${id}`;
 
     const { data: product, isLoading } = useQuery(['product', id], () => fetch(url, {
         method: 'GET',
@@ -66,7 +66,7 @@ const PdsDetail = () => {
         }
         console.log(booking);
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://cryptic-everglades-92183.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

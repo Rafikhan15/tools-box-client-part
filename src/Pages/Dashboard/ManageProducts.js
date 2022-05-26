@@ -9,7 +9,7 @@ import ProductRow from './ProductRow';
 const ManageProducts = () => {
     const [showproduct, setShowproduct] = useState([]);
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://cryptic-everglades-92183.herokuapp.com/product', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

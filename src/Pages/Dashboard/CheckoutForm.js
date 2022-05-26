@@ -15,7 +15,7 @@ const CheckoutForm = ({ booksProduct }) => {
     // 
     useEffect(() => {
 
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://cryptic-everglades-92183.herokuapp.com/create-payment-intent', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -86,7 +86,7 @@ const CheckoutForm = ({ booksProduct }) => {
                 appointment: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/booking/${_id}`, {
+            fetch(`https://cryptic-everglades-92183.herokuapp.com/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

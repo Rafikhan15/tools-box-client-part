@@ -7,7 +7,7 @@ import Loading from '../Shared/Loading';
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    // const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
+    // const { data: services, isLoading } = useQuery('services', () => fetch('https://cryptic-everglades-92183.herokuapp.com/service').then(res => res.json()))
 
     const imageStorageKey = 'ff9b9a5ba8cc869b1cc081c6a93a8a69';
 
@@ -34,7 +34,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/product', {
+                    fetch('https://cryptic-everglades-92183.herokuapp.com/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

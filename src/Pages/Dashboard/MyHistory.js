@@ -18,7 +18,7 @@ const MyHistory = () => {
 
             buyerName: event.target.name.value
         }
-        fetch(`http://localhost:5000/booking/${user.email}`, {
+        fetch(`https://cryptic-everglades-92183.herokuapp.com/booking/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

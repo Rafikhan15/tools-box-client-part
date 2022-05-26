@@ -23,7 +23,7 @@ const ProductBookingModal = ({ showproduct, setShowproduct, refetch }) => {
 
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://cryptic-everglades-92183.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

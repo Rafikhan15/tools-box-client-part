@@ -4,7 +4,7 @@ const usePdDetail = pdsId => {
     const [pd, setPd] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/pds/${pdsId}`;
+        const url = `https://cryptic-everglades-92183.herokuapp.com/pds/${pdsId}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())

@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L2DmNCzbSX2Akh8OYcuDMRyOfQ7p5oIEd7dn
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/booking/${id}`;
+    const url = `https://cryptic-everglades-92183.herokuapp.com/booking/${id}`;
 
     const { data: booksProduct, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
